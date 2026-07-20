@@ -1,5 +1,7 @@
 import { Mail, Download } from "lucide-react";
-import { GitHub, LinkedIn } from "@icons";
+import { SOCIALS } from "@constants/social";
+import PageLink from "../PageLink";
+import { BUTTON } from "@constants/button";
 
 export default function ContactSection() {
   return (
@@ -13,39 +15,38 @@ export default function ContactSection() {
           Whether you have a question, a project idea, or just want to connect — I'll do my best to get back to you.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
-          <a
-            href="mailto:khoa@example.com"
-            className="flex items-center gap-2 px-7 py-3.5 bg-primary text-white font-semibold rounded hover:bg-blue-500 transition-all duration-200">
-            <Mail size={16} /> Say Hello
-          </a>
-          <a
-            href="/resume.pdf"
-            download
-            className="flex items-center gap-2 px-7 py-3.5 border border-border text-foreground font-semibold rounded hover:border-primary hover:text-primary transition-all duration-200">
-            <Download size={16} /> Download Resume
-          </a>
-        </div>
+        <ContactActions />
 
-        <div className="flex justify-center items-center gap-8">
-          {[
-            { href: "https://github.com/khoanguyen", icon: GitHub, label: "GitHub" },
-            { href: "https://linkedin.com/in/khoanguyen", icon: LinkedIn, label: "LinkedIn" },
-            { href: "mailto:khoa@example.com", icon: Mail, label: "Email" },
-          ].map(({ href, icon: Icon, label }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
-              <Icon size={18} />
-              {label}
-            </a>
-          ))}
-        </div>
+        <SocialLinks />
       </div>
     </section>
+  );
+}
+
+function ContactActions() {
+  return (
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10">
+      <a href="mailto:khoa@example.com" className={BUTTON.BUTTON_PRIMARY}>
+        <Mail size={16} /> Say Hello
+      </a>
+      <a href="/resume.pdf" download className={BUTTON.BUTTON_OUTLINE}>
+        <Download size={16} /> Download Resume
+      </a>
+    </div>
+  );
+}
+function SocialLinks() {
+  return (
+    <div className="flex justify-center items-center gap-8">
+      {SOCIALS.map(({ href, icon: Icon, label }) => (
+        <PageLink
+          key={label}
+          to={href}
+          className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
+          <Icon size={18} />
+          {label}
+        </PageLink>
+      ))}
+    </div>
   );
 }

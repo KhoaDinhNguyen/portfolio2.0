@@ -6,7 +6,7 @@ export default function ProjectSection() {
   const [projectIdx, setProjectIdx] = useState<number>(0);
 
   return (
-    <section id="projects" className="h-full flex flex-col overflow-hidden">
+    <section className="h-full flex flex-col overflow-hidden">
       <ProjectTabBar projectIdx={projectIdx} setProjectIdx={setProjectIdx} />
       <div className="mt-14 flex flex-col gap-16">
         <ProjectCard key={PROJECTS[projectIdx].title} project={PROJECTS[projectIdx]} />

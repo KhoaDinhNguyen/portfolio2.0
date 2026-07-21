@@ -3,7 +3,7 @@ import { EXPERIENCE, type ExperienceProps } from "@constants/experience";
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="h-full flex flex-col px-8 py-8 overflow-auto">
+    <section className="h-full flex flex-col px-8 py-8 overflow-auto">
       <SectionHeader label="Experience" title="Where I've Worked" />
 
       <div className="flex-1 overflow-y-auto mt-6 pr-1 flex flex-col gap-5">

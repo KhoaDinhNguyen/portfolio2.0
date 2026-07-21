@@ -8,26 +8,35 @@ export interface ExperienceProps {
 
 export const EXPERIENCE: ExperienceProps[] = [
   {
-    company: "Acme Corp",
-    role: "Software Engineering Intern",
-    period: "May 2024 – Aug 2024",
-    location: "San Francisco, CA",
+    company: "Society of Asian Scientists and Engineers (SASE ASU)",
+    role: "Junior Web Designer",
+    period: "Jan 2026 – May 2026",
+    location: "Phoenix, AZ",
     bullets: [
-      "Implemented responsive React interfaces for 12+ internal HR tools, reducing manual workflow time by ~30% for 200+ staff.",
-      "Built a REST API with Node.js and PostgreSQL to replace a brittle spreadsheet pipeline, eliminating weekly data-import failures.",
-      "Wrote integration tests with Jest covering 90% of new API endpoints; caught 4 critical edge-case bugs before production.",
-      "Collaborated with the DevOps team to containerize the service with Docker and deploy via GitHub Actions CI/CD.",
+      "Implemented a web UI layout for society activities and events, highlighting the contributions of Asian heritage scientists and engineers",
+      "Developed backend functionality with Python and Django, integrating SQLite databases to manage event and organization content",
     ],
   },
   {
-    company: "University Robotics Lab",
-    role: "Undergraduate Research Assistant",
-    period: "Sep 2023 – May 2024",
+    company: "Irenic Therapeutic Services PLLC",
+    role: "Software Engineer Intern",
+    period: "Sep 2025 – Dec 2025",
     location: "Remote",
     bullets: [
-      "Developed a Python data-pipeline to preprocess and label 50K+ sensor readings for a reinforcement-learning model.",
-      "Visualized training metrics with matplotlib and TensorBoard, surfacing a reward-shaping bug that cut convergence time by 40%.",
-      "Co-authored a 12-page workshop paper on sim-to-real transfer techniques, submitted to ICRA 2024.",
+      "Executed continuous delivery pipelines within two-week Agile sprints, launching iterative updates and features for a healthtech therapeutic application",
+      "Partnered with clinical and product teams to define scope for a new patient feature, delivering the minimum viable product",
+      "Optimized SQL queries for data retrieval, filtering, aggregation, and reporting, improving application responsiveness and supporting analytics dashboards",
+    ],
+  },
+  {
+    company: "Opportunity Hack",
+    role: "Software Engineer Intern",
+    period: "Jun 2025 – Aug 2025",
+    location: "Remote",
+    bullets: [
+      "Spearheaded an end-to-end AI platform that leverages intelligent recommendation systems to analyze user preferences and deliver high-compatibility animal matches",
+      "Processed datasets to CSV for model evaluation and experiment tracking while storing production data in MongoDB",
+      "Implemented recommendation models with scikit-learn, utilizing Random Forest and Logistic Regression to improve pet-user compatibility by 80%",
     ],
   },
 ];

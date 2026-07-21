@@ -21,4 +21,4 @@ export const ABOUT = [
   "Feel free to connect or reach out at khoa.job1305@gmail.com."
 ]
 
-export const ABOUT_TAGS = ["Multiplayer Systems", "AI Integration", "API Design", "Database Schema", "CI/CD"]
+export const ABOUT_TAGS = ["Software Development", "Business Intelligence", "Team Player", "Continuous Learning"]

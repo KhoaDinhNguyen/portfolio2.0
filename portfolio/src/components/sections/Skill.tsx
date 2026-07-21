@@ -3,7 +3,7 @@ import { SKILLS } from "@constants/skill";
 
 export default function SkillSection() {
   return (
-    <section id="skills" className="h-full flex flex-col px-8 py-8 overflow-hidden">
+    <section className="h-full flex flex-col px-8 py-8 overflow-hidden">
       <SectionHeader label="Skills" title="Technical Stack" />
 
       <div className="flex-1 overflow-y-auto mt-6 pr-1">

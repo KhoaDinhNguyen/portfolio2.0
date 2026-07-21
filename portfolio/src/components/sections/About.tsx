@@ -1,11 +1,12 @@
 import SectionHeader from "./SectionHeader";
 import { ABOUT, ABOUT_TAGS } from "@constants/profile";
+import myImage from "@assets/my-photo.jpg";
 
 export default function AboutSection() {
   const TAG_STYLE = "px-3 py-1 text-xs font-['JetBrains_Mono',monospace] text-accent border border-accent/30 rounded";
 
   return (
-    <section id="about" className="h-full flex flex-col px-8 py-8 overflow-hidden">
+    <section className="h-full flex flex-col px-8 py-8 overflow-hidden">
       <SectionHeader label="About" title="A Bit About Me" />
 
       <div className="flex-1 overflow-y-auto mt-6 pr-1">
@@ -36,9 +37,9 @@ function MyImage() {
     <div className="relative self-start">
       <div className="rounded-lg overflow-hidden border-2 border-primary/30">
         <img
-          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=640&h=640&fit=crop&auto=format"
+          src={myImage}
           alt="Khoa Nguyen"
-          className="w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500"
+          className="w-full object-cover hover:grayscale-0 transition-all duration-500"
         />
       </div>
     </div>

@@ -54,7 +54,7 @@ function SideBarNavigation({ active, onNavigate }: SideBarProps) {
 
 function SideBarSocials() {
   return (
-    <div className="border-t border-border p-3 flex flex-col items-center lg:items-start gap-2 pb-5">
+    <div className="border-t border-border p-3 flex flex-col items-center lg:items-start gap-2 pb-0">
       {SOCIALS.map(({ href, icon: Icon, label }) => (
         <PageLink
           key={label}

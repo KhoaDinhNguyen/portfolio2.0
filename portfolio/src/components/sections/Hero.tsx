@@ -1,8 +1,9 @@
-import { Terminal, ArrowUpRight, Download } from "lucide-react";
+import { Terminal, ArrowUpRight, File } from "lucide-react";
 import SectionLink from "./SectionLink";
 import CodeWindow from "../code/CodeWindow";
 import { HERO_CODE, HERO_PROFILE } from "@constants/profile";
 import { BUTTON } from "@constants/button";
+import PageLink from "../PageLink";
 
 export default function HeroSection({ onNavigate }: { onNavigate: (id: string) => void }) {
   return (
@@ -47,9 +48,11 @@ function HeroActions({ onNavigate }: { onNavigate: (id: string) => void }) {
 
       <SectionLink className={BUTTON.BUTTON_OUTLINE}>Get in Touch</SectionLink>
 
-      <a href="/resume.pdf" download className={BUTTON.BUTTON_SECONDARY}>
-        <Download size={16} /> Resume
-      </a>
+      <PageLink
+        to="https://drive.google.com/file/d/1D7P5J6jy9nNKXoezo7UN591PYdNOCnJc/view?usp=drive_link"
+        className={BUTTON.BUTTON_SECONDARY}>
+        <File size={16} /> Resume
+      </PageLink>
     </div>
   );
 }

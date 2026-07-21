@@ -61,8 +61,8 @@ function ProjectHighlights({ project: { highlights } }: { project: ProjectProps 
 
       <ul className="flex flex-col gap-1.5">
         {highlights.map((h) => (
-          <li key={h} className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="text-accent mt-0.5 shrink-0">▹</span>
+          <li key={h} className="flex items-center gap-2 text-sm text-muted-foreground">
+            <span className="text-accent shrink-0">▹</span>
             {h}
           </li>
         ))}

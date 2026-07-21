@@ -1,16 +1,16 @@
-import { Terminal, ArrowUpRight } from "lucide-react";
+import { Terminal, ArrowUpRight, Download } from "lucide-react";
 import SectionLink from "./SectionLink";
 import CodeWindow from "../code/CodeWindow";
 import { HERO_CODE, HERO_PROFILE } from "@constants/profile";
 import { BUTTON } from "@constants/button";
 
-export default function HeroSection() {
+export default function HeroSection({ onNavigate }: { onNavigate: (id: string) => void }) {
   return (
     <section className="h-full flex items-center px-10 lg:px-20">
       <div className="grid lg:grid-cols-[1fr_auto] gap-16 items-center w-full max-w-5xl">
         <div>
           <HeroProfile />
-          <HeroActions />
+          <HeroActions onNavigate={onNavigate} />
         </div>
 
         <CodeWindow title="khoa.ts" code={HERO_CODE} />
@@ -38,16 +38,18 @@ function HeroProfile() {
   );
 }
 
-function HeroActions() {
+function HeroActions({ onNavigate }: { onNavigate: (id: string) => void }) {
   return (
     <div className="flex flex-wrap gap-3">
-      <SectionLink to="projects" className={BUTTON.BUTTON_PRIMARY}>
+      <SectionLink onClick={() => onNavigate("projects")} className={BUTTON.BUTTON_PRIMARY}>
         View Projects <ArrowUpRight size={16} />
       </SectionLink>
 
-      <SectionLink to="contact" className={BUTTON.BUTTON_OUTLINE}>
-        Get in Touch
-      </SectionLink>
+      <SectionLink className={BUTTON.BUTTON_OUTLINE}>Get in Touch</SectionLink>
+
+      <a href="/resume.pdf" download className={BUTTON.BUTTON_SECONDARY}>
+        <Download size={16} /> Resume
+      </a>
     </div>
   );
 }

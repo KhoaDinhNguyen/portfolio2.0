@@ -41,7 +41,6 @@ function MyImage() {
           className="w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500"
         />
       </div>
-      <div className="absolute -bottom-2 -right-2 w-full h-full border-2 border-primary/20 rounded-lg -z-10" />
     </div>
   );
 }

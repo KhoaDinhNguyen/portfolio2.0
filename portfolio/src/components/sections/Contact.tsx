@@ -5,13 +5,13 @@ import { BUTTON } from "@constants/button";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-32 px-6 max-w-6xl mx-auto">
-      <div className="max-w-2xl mx-auto text-center">
-        <p className="font-['JetBrains_Mono',monospace] text-sm text-primary mb-4">06. What's Next?</p>
-        <h2 className="font-['Outfit',sans-serif] font-black text-4xl sm:text-5xl text-foreground mb-6">
+    <section id="contact" className="h-full flex items-center justify-center px-8">
+      <div className="max-w-xl mx-auto text-center">
+        <p className="font-['JetBrains_Mono',monospace] text-sm text-primary mb-3">06. What's Next?</p>
+        <h2 className="font-['Outfit',sans-serif] font-black text-4xl sm:text-5xl text-foreground mb-5">
           Get In Touch
         </h2>
-        <p className="text-muted-foreground text-base leading-relaxed mb-10">
+        <p className="text-muted-foreground text-base leading-relaxed mb-8">
           Whether you have a question, a project idea, or just want to connect — I'll do my best to get back to you.
         </p>
 

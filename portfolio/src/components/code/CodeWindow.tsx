@@ -9,9 +9,9 @@ interface CodeWindowProps {
 export default function CodeWindow({ title, code, lang }: CodeWindowProps) {
   return (
     <div className="hidden lg:block w-72">
-      <div className="rounded-lg border border-border bg-card overflow-hidden shadow-xl shadow-black/40">
+      <div className="rounded-lg border border-border bg-[#0d1526] overflow-hidden shadow-2xl shadow-black/50">
         {/** Render's code title */}
-        <div className="flex items-center gap-1.5 px-4 py-3 bg-[#0d1526] border-b border-border">
+        <div className="flex items-center gap-1.5 px-4 py-3 border-b border-border">
           <WindowControls />
           <span className="ml-2 font-['JetBrains_Mono',monospace] text-xs text-muted-foreground">{title}</span>
         </div>

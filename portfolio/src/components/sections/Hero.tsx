@@ -46,7 +46,9 @@ function HeroActions({ onNavigate }: { onNavigate: (id: string) => void }) {
         View Projects <ArrowUpRight size={16} />
       </SectionLink>
 
-      <SectionLink className={BUTTON.BUTTON_OUTLINE}>Get in Touch</SectionLink>
+      <SectionLink onClick={() => onNavigate("contact")} className={BUTTON.BUTTON_OUTLINE}>
+        Get in Touch
+      </SectionLink>
 
       <PageLink
         to="https://drive.google.com/file/d/1D7P5J6jy9nNKXoezo7UN591PYdNOCnJc/view?usp=drive_link"
